@@ -1,4 +1,6 @@
 from django.shortcuts import render
+import os.path
 
 def post_list(request):
-    return render(request, 'blog\post_list.html', {})
+    temppath = os.path.join('blog', 'post_list.html')
+    return render(request, temppath, {})
