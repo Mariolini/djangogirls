@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blutdrucktabelle</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'bloodpressure/style.css' %}" />
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <main>
+    <div id="input-container">
+      <label for="date-input">Datum:</label>
+      <input id="date-input" type="date">
+      
+      <label for="time-input">Uhrzeit:</label>
+      <input id="time-input" type="time">
+      
+      <label for="syst-input">systolisch:</label>
+      <input id="syst-input" type="number">
+      
+      <label for="diast-input">diastolisch:</label>
+      <input id="diast-input" type="number">
+      
+      <label for="puls-input">Puls:</label>
+      <input id="puls-input" type="number">
+      
+      <button id="save-button">Speichern</button>
+    </div>
+    <div id="show-container">
+      <div id="output-field">
+        09.02.2022, 09:00 | 152 | 104 | 88 <br>
+        09.02.2022, 10:00 | 149 | 98 | 103
+      </div>
+      <button id="print-button">Drucken</button>
+      <button id="export-button">Exportieren</button>
+      <button id="manage-button">Eintrag bearbeiten</button>
+
+    </div>
+  </main>
+</body>
+
+</html>
